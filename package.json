@@ -4,9 +4,10 @@
   "description": "![](https://www.exoscale.com/static/syslog/2018-11-08-what-is-ci/what-is-continuous-integration.png) > source exoscale.com",
   "main": "index.js",
   "scripts": {
-    "test": "jest tests --detectOpenHandles",
+    "test": "jest tests --detectOpenHandles --forceExit --testTimeout=10000 ",
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "coverage": "jest --coverage --detectOpenHandles --forceExit && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "testEnvironment": "node"
