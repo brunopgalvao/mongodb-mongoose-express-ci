@@ -1,8 +1,15 @@
 language: node_js
 node_js:
-  - 'stable'
+- stable
 install: npm install
 services:
-  - mongodb
+- mongodb
 script: npm test
 after_success: npm run coverage
+deploy:
+  provider: heroku
+  api_key:
+    secure: akuCt0FQYsMhyLJy6USGxkrpa6Ja1ee1SIRztDtEJTmcIdAQaYNAvfANK+w4x2lIugrU4eskN3p/oXOxZzSPYKiDhRINZ6QwFwWVk1OdlhrdWNCwzC4VI77UV7v6BJnEKXlrfZbB7+KpO3eJbhKTph554p3YXZ46R116ZZ6dpH7E6wcukJFpoKHk348zFrkekyiQSPZUheGWNwROBWzuX/4MB6SamjAl3Vm9jfBNUQStzeL6Hm2wGrg/YYTZay8dNYaQ9/6hB1WBIGceb2i+yBSm1Catr5+1YrSOI1Y93XHg8v7iAVxNKhlJLtvC9mIyI8xWwaOFpVC1ntSxrCwnYGj5PaxBAyV46zaeqG2GsLOau+ntoN9d6EtqK9xgLiNpld15qGcrD5Le+qX7W7f/xt9fHmd/iBTSDS6bKJVoIEnAkkCZshLpJy3rMk8hvWbg0wpSDcqUujmUNy2xf5PyBROJJH6FAplVWcy+1McHra6bt9Y2JTwt6C9So3kK2g9OXTcekyIBavTJ0GuMcZsE6ycq7rxxQ1ePWSI4Xjt56rE1uPURHrp/hZFt2oNZGD83HJRz37ug+cggXXQCOhzidNJpgVV6Y9IXNiX+6FuF9tyNIJPZ76G7hfu4QFUdcttULoqygL7hlOv2bMhQl533vU3+FPunj0J5n46Y1voVltg=
+  app: seba-test-app
+  on:
+    repo: sbaayel/mongodb-mongoose-express-ci
