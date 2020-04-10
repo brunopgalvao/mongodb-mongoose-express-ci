@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/sbaayel/mongodb-mongoose-express-ci/badge.svg?branch=master)](https://coveralls.io/github/sbaayel/mongodb-mongoose-express-ci?branch=master)
+
+
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  SOFTWARE ENGINEERING IMMERSIVE
 
 ![](https://www.exoscale.com/static/syslog/2018-11-08-what-is-ci/what-is-continuous-integration.png)
